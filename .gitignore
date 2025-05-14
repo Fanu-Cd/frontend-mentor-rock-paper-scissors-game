@@ -9,6 +9,7 @@
 !.yarn/plugins
 !.yarn/releases
 !.yarn/versions
+rock-paper-scissors-master/
 
 # testing
 /coverage
