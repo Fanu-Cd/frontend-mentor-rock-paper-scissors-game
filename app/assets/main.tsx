@@ -14,8 +14,6 @@ import {
 import rockImage from "../assets/icon-rock.svg";
 import paperImage from "../assets/icon-paper.svg";
 import scissorImage from "../assets/icon-scissors.svg";
-import spockImage from "../assets/icon-spock.svg";
-import lizardImage from "../assets/icon-lizard.svg";
 import GameCard from "../components/common/game-card";
 import { useDisclosure, useMediaQuery } from "@mantine/hooks";
 import Image from "next/image";
@@ -28,11 +26,11 @@ import { cssBreakPoints } from "../constants/main";
 import { GameCard as GameCardType, GameCardValue } from "../models/main";
 const Main = () => {
   const gameCards: GameCardType[] = [
-    { image: scissorImage, pos: "top", title: "scissors" },
-    { image: spockImage, pos: "first-left", title: "spock" },
-    { image: paperImage, pos: "first-right", title: "paper" },
-    { image: lizardImage, pos: "second-left", title: "lizard" },
     { image: rockImage, pos: "second-right", title: "rock" },
+    { image: paperImage, pos: "first-right", title: "paper" },
+    { image: scissorImage, pos: "top", title: "scissors" },
+    { image: scissorImage, pos: "first-left", title: "spock" },
+    { image: scissorImage, pos: "second-left", title: "lizard" },
   ];
 
   const [isRulesModalOpen, { open: openRulesModal, close: closeRulesModal }] =
@@ -53,23 +51,12 @@ const Main = () => {
       setPickedByHouse(housePick);
       if (isUserCardWinner(pickedByUser as GameCardValue, housePick)) {
         setPlayerWins(true);
-        localStorage.setItem("score", String(score + 1));
         return setScore((prev) => prev + 1);
       }
       setPlayerWins(false);
       setScore((prev) => (prev === 0 ? 0 : prev - 1));
-      localStorage.setItem(
-        "score",
-        String(score === 0 ? 0 : String(score - 1))
-      );
     }
   };
-
-  useEffect(() => {
-    if (localStorage.getItem("score")) {
-      setScore(Number(localStorage.getItem("score")));
-    }
-  }, []);
 
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -253,7 +240,9 @@ const Main = () => {
                 }}
               >
                 <GameCard
-                  card={gameCards.find((x) => x.pos === "top") as GameCardType}
+                  card={
+                    gameCards.find((x) => x.pos === "bottom") as GameCardType
+                  }
                 />
               </Box>
               <Flex justify={"space-between"} className="w-full">

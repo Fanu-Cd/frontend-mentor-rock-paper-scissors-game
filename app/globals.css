@@ -169,6 +169,13 @@ body {
   background-size: 100% 100%;
 }
 
+.bg-pentagon{
+    background-image: url("assets/bg-pentagon.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100% 100%;
+}
+
 .game-card-rock {
   outline: 10px red solid;
 }
@@ -179,6 +186,14 @@ body {
 
 .game-card-scissor {
   outline: 10px rgb(216, 194, 70) solid;
+}
+
+.game-card-spock {
+  outline: 10px rgb(115, 211, 228) solid;
+}
+
+.game-card-lizard {
+  outline: 10px rgb(138, 70, 216) solid;
 }
 
 .winner-bg {
