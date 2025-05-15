@@ -1,4 +1,117 @@
 @import "tailwindcss";
+@font-face {
+  font-family: "Barlow Semi Condensed";
+  src: url(`../../assets/Barlow_Semi_Condensed/BarlowSemiCondensed-Regular.ttf);
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "Barlow Semi Condensed";
+  src: url(`../../assets/Barlow_Semi_Condensed/BarlowSemiCondensed-Italic.ttf);
+  font-weight: 400;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Barlow Semi Condensed";
+  src: url(`../../assets/Barlow_Semi_Condensed/BarlowSemiCondensed-Bold.ttf);
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: "Barlow Semi Condensed";
+  src: url(`../../assets/Barlow_Semi_Condensed/BarlowSemiCondensed-BoldItalic.ttf);
+  font-weight: 700;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Barlow Semi Condensed";
+  src: url(`../../assets/Barlow_Semi_Condensed/BarlowSemiCondensed-Black.ttf);
+  font-weight: 900;
+}
+
+@font-face {
+  font-family: "Barlow Semi Condensed";
+  src: url(`../../assets/Barlow_Semi_Condensed/BarlowSemiCondensed-BlackItalic.ttf);
+  font-weight: 900;
+}
+
+@font-face {
+  font-family: "Barlow Semi Condensed";
+  src: url("./assets/Barlow_Semi_Condensed/BarlowSemiCondensed-ExtraLight.ttf")
+    format("truetype");
+  font-weight: 200;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Barlow Semi Condensed";
+  src: url("./assets/Barlow_Semi_Condensed/BarlowSemiCondensed-ExtraLightItalic.ttf")
+    format("truetype");
+  font-weight: 200;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Barlow Semi Condensed";
+  src: url("./assets/Barlow_Semi_Condensed/BarlowSemiCondensed-Light.ttf")
+    format("truetype");
+  font-weight: 300;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Barlow Semi Condensed";
+  src: url("./assets/Barlow_Semi_Condensed/BarlowSemiCondensed-LightItalic.ttf")
+    format("truetype");
+  font-weight: 300;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Barlow Semi Condensed";
+  src: url("./assets/Barlow_Semi_Condensed/BarlowSemiCondensed-Medium.ttf")
+    format("truetype");
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Barlow Semi Condensed";
+  src: url("./assets/Barlow_Semi_Condensed/BarlowSemiCondensed-MediumItalic.ttf")
+    format("truetype");
+  font-weight: 500;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Barlow Semi Condensed";
+  src: url("./assets/Barlow_Semi_Condensed/BarlowSemiCondensed-SemiBold.ttf")
+    format("truetype");
+  font-weight: 600;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Barlow Semi Condensed";
+  src: url("./assets/Barlow_Semi_Condensed/BarlowSemiCondensed-SemiBoldItalic.ttf")
+    format("truetype");
+  font-weight: 600;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Barlow Semi Condensed";
+  src: url("./assets/Barlow_Semi_Condensed/BarlowSemiCondensed-ExtraBold.ttf")
+    format("truetype");
+  font-weight: 800;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Barlow Semi Condensed";
+  src: url("./assets/Barlow_Semi_Condensed/BarlowSemiCondensed-ExtraBoldItalic.ttf")
+    format("truetype");
+  font-weight: 800;
+  font-style: italic;
+}
 
 * {
   box-sizing: border-box;
@@ -6,4 +119,129 @@
 
 body {
   margin: 0;
+  background: radial-gradient(
+    circle,
+    hsl(214, 47%, 23%),
+    hsl(237, 49%, 15%)
+  ) !important;
+  min-height: 100vh;
+  font-family: "Barlow Semi Condensed", sans-serif !important;
+  min-width: 320px;
+  overflow: hidden;
+}
+
+.house-picking-bg {
+  background: hsl(237, 43%, 21%);
+}
+
+.rad_gradient {
+  background: radial-gradient(
+    circle,
+    hsl(214, 47%, 23%),
+    hsl(237, 49%, 15%)
+  ) !important;
+}
+
+.header-border-color {
+  border-color: hsl(217, 16%, 45%) !important;
+}
+
+.txt-dark {
+  color: hsl(229, 25%, 31%) !important;
+}
+
+.score-text {
+  color: hsl(229, 64%, 46%) !important;
+}
+
+.txt-white {
+  color: white !important;
+}
+
+.white-bg {
+  background-color: white !important;
+}
+
+.bg-triangle {
+  background-image: url("assets/bg-triangle.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100% 100%;
+}
+
+.game-card-rock {
+  outline: 10px red solid;
+}
+
+.game-card-paper {
+  outline: 10px rgb(72, 97, 211) solid;
+}
+
+.game-card-scissor {
+  outline: 10px rgb(216, 194, 70) solid;
+}
+
+.winner-bg {
+  position: relative;
+  z-index: 0;
+}
+
+.winner-bg::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  width: 500%;
+  height: 500%;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+
+  background: radial-gradient(
+    circle at center,
+    hsla(214, 47%, 80%, 0.1) 0rem,
+    hsla(214, 47%, 80%, 0.1) 1.25rem,
+    transparent 1.25rem,
+    transparent 1.875rem,
+
+    hsla(214, 47%, 80%, 0.08) 1.875rem,
+    hsla(214, 47%, 80%, 0.08) 3.125rem,
+    transparent 3.125rem,
+    transparent 3.75rem,
+
+    hsla(214, 47%, 80%, 0.06) 3.75rem,
+    hsla(214, 59%, 32%, 0.06) 5rem,
+    transparent 5rem,
+    transparent 5.625rem,
+
+    hsla(214, 47%, 80%, 0.04) 5.625rem,
+    hsla(214, 47%, 80%, 0.04) 6.875rem,
+    transparent 6.875rem,
+    transparent 7.5rem,
+
+    hsla(214, 47%, 80%, 0.03) 7.5rem,
+    hsla(214, 47%, 80%, 0.03) 8.75rem,
+    transparent 8.75rem,
+    transparent 9.375rem,
+
+    hsla(214, 47%, 80%, 0.025) 9.375rem,
+    hsla(214, 47%, 80%, 0.025) 10.625rem,
+    transparent 10.625rem,
+    transparent 11.25rem,
+
+    hsla(214, 47%, 80%, 0.02) 11.25rem,
+    hsla(214, 47%, 80%, 0.02) 12.5rem,
+    transparent 12.5rem,
+    transparent 13.125rem,
+
+    hsla(214, 47%, 80%, 0.015) 13.125rem,
+    hsla(214, 47%, 80%, 0.015) 14.375rem,
+    transparent 14.375rem,
+    transparent 15rem
+  );
+
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
