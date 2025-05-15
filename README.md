@@ -25,7 +25,7 @@ Users should be able to:
 
 ### Screenshot
 
-![Main Page](rock-paper-scissors-master/image.png)
+![Main Page](image.png)
 
 ### Links
 
