@@ -241,7 +241,7 @@ const Main = () => {
               >
                 <GameCard
                   card={
-                    gameCards.find((x) => x.pos === "bottom") as GameCardType
+                    gameCards.find((x) => x.pos === "top") as GameCardType
                   }
                 />
               </Box>
