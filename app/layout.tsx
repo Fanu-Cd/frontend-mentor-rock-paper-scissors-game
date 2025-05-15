@@ -1,22 +1,13 @@
 import type { Metadata } from "next";
-// import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import "@mantine/core/styles.css";
 import { MantineProvider } from "@mantine/core";
-
-// const geistSans = Geist({
-//   variable: "--font-geist-sans",
-//   subsets: ["latin"],
-// });
-
-// const geistMono = Geist_Mono({
-//   variable: "--font-geist-mono",
-//   subsets: ["latin"],
-// });
-
 export const metadata: Metadata = {
   title: "Rock Paper Scissors",
   description: "Rock Paper Scissors Game",
+  icons: {
+    icon: "../public/assets/favicon.png",
+  },
 };
 
 export default function RootLayout({
@@ -26,9 +17,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-      // className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
+      <body className="h-screen">
         <MantineProvider>{children}</MantineProvider>
       </body>
     </html>
