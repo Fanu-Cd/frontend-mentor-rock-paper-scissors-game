@@ -3,8 +3,8 @@ import "./globals.css";
 import "@mantine/core/styles.css";
 import { MantineProvider } from "@mantine/core";
 export const metadata: Metadata = {
-  title: "Rock Paper Scissors",
-  description: "Rock Paper Scissors Game",
+  title: "Rock Paper Scissors Spock Lizard Game",
+  description: "Rock Paper Scissors Spock Lizard Game",
   icons: {
     icon: "../public/assets/favicon.png",
   },

@@ -53,7 +53,7 @@ What I Learned While I Implemented the Rock, Paper, Sissors solution
 
 - Used Tailwind CSS to build responsive layouts across different screen sizes
 - Managed game state in React and persisted the score using localStorage
-- Implemented game logic for Rock, Paper, Scissors against a computer opponent
+- Implemented game logic for Rock, Paper, Scissors, Spock, Lizard against a computer opponent
 - Gained experience using Mantine UI components for fast and consistent styling
 - Practiced scaling game logic with additional conditions cleanly and modularly
 - Improved understanding of conditional rendering and reusable UI components

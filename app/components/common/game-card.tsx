@@ -11,7 +11,11 @@ const GameCard = ({ card }: { card: GameCard }) => {
           ? "game-card-rock"
           : card?.title === "paper"
           ? "game-card-paper"
-          : "game-card-scissor"
+          : card?.title === "scissors"
+          ? "game-card-scissor"
+          : card?.title === "spock"
+          ? "game-card-spock"
+          : "game-card-lizard"
       }`}
     >
       <Image src={card?.image} alt="Card Image" width={25} height={25} />
